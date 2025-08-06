@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 .container {
@@ -78,7 +78,7 @@
 }
 
 .card-container-middle-info p {
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 100;
   margin-top: 16px;
 }
@@ -94,7 +94,7 @@
   align-items: center;
 }
 
-.card-container-bottom form{
+.card-container-bottom form {
   /* border: 1px solid; */
   height: 48px;
   width: 500px;
@@ -102,30 +102,43 @@
   grid-template-columns: 80% 20%;
 }
 
-.card-container-bottom form input{
+.card-container-bottom form input {
   height: 100%;
   border-radius: 0;
   border: none;
 }
 
-.card-container-bottom form input[type="text"]{
-  border:1px solid #B7B7B7;
+.card-container-bottom form input[type="text"] {
+  border: 1px solid #b7b7b7;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
   border-right: none;
   padding: 1rem;
 }
 
-.card-container-bottom form input[type="button"]{
+.card-container-bottom form input[type="button"] {
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
-  background: linear-gradient(45deg, #ff354d 0%, #fe6108 100%);
+  background: linear-gradient(45deg, #ff354d, #fe6108, #ff354d);
+  background-size: 300% 300%;
   color: white;
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
+  animation: gradientMove 5s ease infinite;
 }
 
-.card-container-bottom p{
-  color: #B7B7B7;
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.card-container-bottom p {
+  color: #b7b7b7;
 }
