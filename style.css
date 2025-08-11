@@ -14,8 +14,8 @@
 }
 
 .card-container {
-  width: 100%;
-  max-width: 900px;
+  width: 448px;
+  min-height: 292px;
   background-color: white;
   border-radius: 16px;
   position: relative;
@@ -27,19 +27,19 @@
 
 .card-container::before {
   content: "";
-  height: 150px;
+  height: 100px;
   width: 70px;
   position: absolute;
   top: 80%;
-  left: -5%;
+  left: -10%;
   background-image: radial-gradient(circle, #ffffff 2px, transparent 3px);
   background-size: 15px 15px;
 }
 
 .card-container::after {
   content: "";
-  height: 70px;
-  width: 150px;
+  height: 60px;
+  width: 100px;
   position: absolute;
   top: -10%;
   left: 90%;
@@ -66,11 +66,11 @@
 }
 
 .card-container-middle-info h1 {
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-size: clamp(10px, 1vw, 12px);
 }
 
 .card-container-middle-info h2 {
-  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  font-size: clamp(16px, 2vw, 24px);
   text-transform: uppercase;
   background: linear-gradient(45deg, #ff354d 0%, #ff482f 44%, #fe6108 100%);
   display: inline;
@@ -79,7 +79,7 @@
 }
 
 .card-container-middle-info p {
-  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  font-size: clamp(9px, 0.9vw, 11px);
   font-weight: 400;
   margin-top: 16px;
 }
@@ -112,7 +112,15 @@
   border: 1px solid #b7b7b7;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
-  padding: 0.5rem;
+  padding: 0.3rem;
+}
+
+.card-container-bottom form input[type="text"]::placeholder{
+  font-size: clamp(9px, 0.9vw, 11px);
+
+}
+form + p{
+  font-size: clamp(9px, 0.9vw, 11px);
 }
 
 .card-container-bottom form input[type="button"] {
@@ -123,9 +131,10 @@
   color: white;
   text-transform: uppercase;
   font-weight: bold;
+  font-size: clamp(9px, 0.9vw, 11px);
   cursor: pointer;
   animation: gradientMove 5s ease infinite;
-  padding: 0.5rem;
+  padding: 0.3rem;
 }
 
 @keyframes gradientMove {
